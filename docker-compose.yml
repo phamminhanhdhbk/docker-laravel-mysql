@@ -1,0 +1,52 @@
+version: "2"
+services:
+  application:
+    image: euclid1990/ubuntu-server
+    volumes:
+      - ./:/var/www/html
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    ports:
+      - "3696:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./docker/db:/var/lib/mysql
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    links:
+      - mariadb
+    ports:
+      - 4040:80
+    volumes:
+      - ./docker-config/phpmyadmin/sessions:/sessions
+  php:
+    build: ./docker/php
+    container_name: php
+    ports:
+      - "9696:9000"
+    volumes_from:
+      - application
+    links:
+      - mariadb:mysql
+  nginx:
+    image: nginx
+    ports:
+      - "8696:80"
+    links:
+      - php
+    volumes_from:
+      - application
+    volumes:
+      - ./docker/logs/nginx/:/var/log/nginx
+      - ./docker/nginx_conf:/etc/nginx/conf.d
