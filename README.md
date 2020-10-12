@@ -29,14 +29,14 @@
         composer install
 ## Step 10: Generate key
         php artisan key:generate
-## Step 11. Update driver to mysql connect php
+## Step 11: Update driver to mysql connect php
         docker-php-ext-install pdo pdo_mysql
-## Step 11:Run migrate
+## Step 12:Run migrate
         php artisan migrate
-## Step 12:Result
+## Step 13:Result
 http://localhost:8696/ laravel
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/4.PNG)
-# Step 13: Connect to mysql by Navicat
+# Step 14: Connect to mysql by Navicat
         ```
         host: localhost
         port: 3696
@@ -44,10 +44,10 @@ http://localhost:8696/ laravel
         password: root
         ```
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/1.PNG)
-# Step 14: phpmyadmin
+# Step 15: phpmyadmin
  http://localhost:4040/
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/6.png)
         
-# Step 15: Reference documents
+# Step 16: Reference documents
 - https://viblo.asia/p/docker-compose-dung-moi-truong-cho-ung-dung-laravel-WrJvYEYJvVO
 - https://docs.docker.com/docker-for-windows/install/
