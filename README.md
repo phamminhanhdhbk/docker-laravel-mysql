@@ -29,6 +29,8 @@
         composer install
 ## Step 10: Generate key
         php artisan key:generate
+## Step 11. Update driver to mysql connect php
+        docker-php-ext-install pdo pdo_mysql
 ## Step 11:Run migrate
         php artisan migrate
 ## Step 12:Result
