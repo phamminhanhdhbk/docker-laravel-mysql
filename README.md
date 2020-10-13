@@ -19,10 +19,14 @@
 
  ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
 
-## Step 7: Run docker
+## Step 7: run docker to create containers
+        ```
 		docker-compose up -d
+        ```
+        
+        
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/2.PNG)
-## Step 8: Attach to container php
+## Step 8: Attach to the php container to execute the command line
         docker exec -it  php bash 
 ## Step 9:Update composer
         composer install
