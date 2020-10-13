@@ -8,14 +8,13 @@
         cd docker-laravel-mysql
         cp .env.example .env
 
-        ```
         DB_CONNECTION=mysql
         DB_HOST=mariadb
         DB_PORT=3306
         DB_DATABASE=mydb
         DB_USERNAME=root
         DB_PASSWORD=root
-        ```
+       
 
  ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
 
@@ -40,12 +39,12 @@
 http://localhost:8696/ laravel
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/4.PNG)
 # Step 10: Connect to mysql by Navicat
-        ```
+       
         host: localhost
         port: 3696
         user name : root
         password: root
-        ```
+        
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/1.PNG)
 # Step 11: phpmyadmin
  http://localhost:4040/
