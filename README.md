@@ -31,7 +31,7 @@
         php artisan key:generate
 ## Step 11: Update driver to mysql connect php
         docker-php-ext-install pdo pdo_mysql
-## Step 12: Set permisstion if OS local diffrent WINDOWNS
+## Step 12: Set permission
         chown -R root:www-data storage/
         chmod -R 775 storage/
         chown -R root:www-data bootstrap/
