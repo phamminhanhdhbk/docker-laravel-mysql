@@ -1,10 +1,10 @@
 ### SETUP ENV DOCKER LARAVEL
-## Step 2: Setup and Check version docker installed
+## Step 1: Setup and Check version docker installed
 		docker --version
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/3.PNG)
-## Step 3 : Clone project laravel version 5.8
+## Step 2 : Clone project laravel version 5.8
 		git clone https://github.com/phamminhanhdhbk/docker-laravel-mysql.git
-## Step 4: Access to the project, create and edit file .env
+## Step 3: Access to the project, create and edit file .env
         cd docker-laravel-mysql
         cp .env.example .env
 
@@ -19,27 +19,27 @@
 
  ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
 
-## Step 7: run docker to create containers
+## Step 4: run docker to create containers
 		docker-compose up -d
         
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/2.PNG)
-## Step 8: Attach to the php container to execute the command line
+## Step 5: Attach to the php container to execute the command line
         docker exec -it  php bash 
-## Step 9:Update composer, Generate key, Update driver to mysql connect php
+## Step 6:Update composer, Generate key, Update driver to mysql connect php
         composer install
         php artisan key:generate
         docker-php-ext-install pdo pdo_mysql
-## Step 12: Set permission
+## Step 7: Set permission
         chown -R root:www-data storage/
         chmod -R 775 storage/
         chown -R root:www-data bootstrap/
         chmod -R 775 bootstrap/
-## Step 13:Run migrate to create database tables
+## Step 8:Run migrate to create database tables
         php artisan migrate
-## Step 14:Achievement
+## Step 9:Achievement
 http://localhost:8696/ laravel
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/4.PNG)
-# Step 15: Connect to mysql by Navicat
+# Step 10: Connect to mysql by Navicat
         ```
         host: localhost
         port: 3696
@@ -47,10 +47,10 @@ http://localhost:8696/ laravel
         password: root
         ```
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/1.PNG)
-# Step 16: phpmyadmin
+# Step 11: phpmyadmin
  http://localhost:4040/
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/6.png)
         
-# Step 17: Reference documents
+# Step 12: Reference documents
 - https://viblo.asia/p/docker-compose-dung-moi-truong-cho-ung-dung-laravel-WrJvYEYJvVO
 - https://docs.docker.com/docker-for-windows/install/
