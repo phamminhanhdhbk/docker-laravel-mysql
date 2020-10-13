@@ -1,15 +1,13 @@
 ### SETUP ENV DOCKER LARAVEL
-## Step 1: Install docker if you haven't already
-## Step 2: Check version installed
+## Step 2: Setup and Check version docker installed
 		docker --version
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/3.PNG)
 ## Step 3 : Clone project laravel version 5.8
 		git clone https://github.com/phamminhanhdhbk/docker-laravel-mysql.git
-## Step 4: 
+## Step 4: Access to the project, create and edit file .env
         cd docker-laravel-mysql
-## Step 5: Create file .env
         cp .env.example .env
-## Step 6: Edit file .env
+
         ```
         DB_CONNECTION=mysql
         DB_HOST=mariadb
@@ -18,7 +16,8 @@
         DB_USERNAME=root
         DB_PASSWORD=root
         ```
-![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
+
+ ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
 
 ## Step 7: Run docker
 		docker-compose up -d
