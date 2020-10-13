@@ -20,28 +20,23 @@
  ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
 
 ## Step 7: run docker to create containers
-        ```
 		docker-compose up -d
-        ```
-        
         
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/2.PNG)
 ## Step 8: Attach to the php container to execute the command line
         docker exec -it  php bash 
-## Step 9:Update composer
+## Step 9:Update composer, Generate key, Update driver to mysql connect php
         composer install
-## Step 10: Generate key
         php artisan key:generate
-## Step 11: Update driver to mysql connect php
         docker-php-ext-install pdo pdo_mysql
 ## Step 12: Set permission
         chown -R root:www-data storage/
         chmod -R 775 storage/
         chown -R root:www-data bootstrap/
         chmod -R 775 bootstrap/
-## Step 13:Run migrate
+## Step 13:Run migrate to create database tables
         php artisan migrate
-## Step 14:Result
+## Step 14:Achievement
 http://localhost:8696/ laravel
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/4.PNG)
 # Step 15: Connect to mysql by Navicat
