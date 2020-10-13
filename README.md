@@ -1,5 +1,5 @@
 ### SETUP ENV DOCKER LARAVEL
-## Step 1: Setup and Check version docker installed
+## Step 1: Setup and check version docker installed
 		docker --version
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/3.PNG)
 ## Step 2 : Clone project laravel version 5.8
@@ -18,7 +18,7 @@
 
  ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/5.PNG)
 
-## Step 4: run docker to create containers
+## Step 4: Run docker to create containers
 		docker-compose up -d
         
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/2.PNG)
@@ -39,7 +39,7 @@
 ## Step 9:Achievement
 http://localhost:8696/ laravel
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/4.PNG)
-# Step 10: Connect to mysql by Navicat
+# Step 9.1: If use Navicat you can connect to mysql by account
        
         host: localhost
         port: 3696
@@ -47,7 +47,7 @@ http://localhost:8696/ laravel
         password: root
         
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/1.PNG)
-# Step 11: phpmyadmin
+# Step 9.2: phpmyadmin
  http://localhost:4040/
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/6.png)
         
