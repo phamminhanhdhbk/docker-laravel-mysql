@@ -24,10 +24,12 @@
 ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/2.PNG)
 ## Step 5: Attach to the php container to execute the command line
         docker exec -it  php bash 
+![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/7.PNG)
 ## Step 6:Update composer, Generate key, Update driver to mysql connect php
         composer install
         php artisan key:generate
         docker-php-ext-install pdo pdo_mysql
+ ![alt text](https://github.com/phamminhanhdhbk/docker-laravel-mysql/blob/master/public/images/readme/8.PNG)
 ## Step 7: Set permission
         chown -R root:www-data storage/
         chmod -R 775 storage/
